@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Pizza {
+    public enum Size {Personal, Medium, Large}
+    public enum Crust {Thin, Regular, Thick, Cauliflower}
+
     private String size;
     private String crustType;
     private boolean stuffedCrust;
@@ -45,5 +48,30 @@ public class Pizza {
 
     public void setToppings(List<Toppings> toppings) {
         this.toppings = toppings;
+    }
+    public void addTopping(Toppings t) {
+        toppings.add(t);
+    }
+    public double getCost(){
+        double base;
+        switch (size){
+            case Size.Personal -> base = 8.00;
+            case Medium -> base = 12.00;
+            case Large -> base = 16.00;
+            default -> base = 10.00;
+        }
+        if (stuffedCrust) base += 3.00;
+
+        for (Toppings t : toppings) {
+            base += t.isPremium() ? 2.00 :1.00;
+        }
+        return base;
+
+        @Override
+         public String toString() {
+            return size + "pizza, " + crust + "crust" +
+                    (stuffedCrust ? "(stuffed crust)" : "") +
+                    ", Toppings: " + toppings;
+        }
     }
 }
