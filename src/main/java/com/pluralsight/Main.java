@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-
+        OrderScreen orderScreen = new OrderScreen(){};
         Scanner scanner = new Scanner(System.in);
         boolean running = true;
 
@@ -17,6 +17,16 @@ public class Main {
             System.out.println("Enter choice: ");
 
             String input = scanner.nextLine();
+            switch (input) {
+                case "1" :
+                    orderScreen.display();
+                    break;
+                case "0" :
+                    return;
+                default:
+                    System.out.println("Invalid input");
+                    break;
+            }
         }
     }
 }

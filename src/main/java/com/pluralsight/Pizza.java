@@ -7,22 +7,22 @@ public class Pizza {
     public enum Size {Personal, Medium, Large}
     public enum Crust {Thin, Regular, Thick, Cauliflower}
 
-    private String size;
+    private Size size;
     private String crustType;
     private boolean stuffedCrust;
     private List<Toppings> toppings = new ArrayList<>();
 
-    public Pizza(boolean stuffedCrust, String crustType, String size) {
+    public Pizza(boolean stuffedCrust, String crustType, Size size) {
         this.stuffedCrust = stuffedCrust;
         this.crustType = crustType;
         this.size = size;
     }
 
-    public String getSize() {
+    public Size getSize() {
         return size;
     }
 
-    public void setSize(String size) {
+    public void setSize(Size size) {
         this.size = size;
     }
 
@@ -56,8 +56,8 @@ public class Pizza {
         double base;
         switch (size){
             case Size.Personal -> base = 8.00;
-            case Medium -> base = 12.00;
-            case Large -> base = 16.00;
+            case Size.Medium -> base = 12.00;
+            case Size.Large -> base = 16.00;
             default -> base = 10.00;
         }
         if (stuffedCrust) base += 3.00;
@@ -66,12 +66,12 @@ public class Pizza {
             base += t.isPremium() ? 2.00 :1.00;
         }
         return base;
+    }
 
-        @Override
-         public String toString() {
-            return size + "pizza, " + crust + "crust" +
-                    (stuffedCrust ? "(stuffed crust)" : "") +
-                    ", Toppings: " + toppings;
-        }
+    @Override
+    public String toString() {
+        return size + "pizza, " + crustType + "crust" +
+                (stuffedCrust ? "(stuffed crust)" : "") +
+                ", Toppings: " + toppings;
     }
 }
