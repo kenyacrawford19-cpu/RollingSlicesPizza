@@ -1,12 +1,12 @@
 package com.pluralsight;
 
-public class Drink {
+public class Drinks {
     public enum Size {Small, Medium, Large}
 
     private Size size;
     private String flavor;
 
-    public Drink(Size size, String flavor) {
+    public Drinks(Size size, String flavor) {
         this.size = size;
         this.flavor = flavor;
     }
@@ -17,5 +17,13 @@ public class Drink {
             case Size.Large -> 2.50;
             default -> 0.00;
         };
+    }
+
+    @Override
+    public String toString() {
+        return "Drinks{" +
+                "size=" + size +
+                ", flavor='" + flavor + '\'' +
+                '}';
     }
 }

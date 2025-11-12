@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Pizza {
+    public Pizza(Size size, Crust crust, boolean b) {
+    }
+
     public enum Size {Personal, Medium, Large}
     public enum Crust {Thin, Regular, Thick, Cauliflower}
 
