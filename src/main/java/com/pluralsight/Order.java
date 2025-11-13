@@ -46,12 +46,28 @@ public class Order {
     }
 
         public void displayNewestFirst(){
-            for (int i = pizzas.size() -1; 1 >= 0; i--){
-                System.out.println("Pizza: "+ pizzas.get(i));
-            for (i = drinks.size() - 1; i >= 0; i--)
-                System.out.println("Drink: " + drinks.get(i));
-            if (cheeseSticks > 0) System.out.println("Cheese Sticks: " + cheeseSticks);
+//            for (int i = pizzas.size() -1; 1 >= 0; i--){
+//                System.out.println("Pizza: "+ pizzas.get(i));
+//            for (i = drinks.size() - 1; i >= 0; i--)
+//                System.out.println("Drink: " + drinks.get(i));
+//            if (cheeseSticks > 0) System.out.println("Cheese Sticks: " + cheeseSticks);
+//            }
+
+            for(int i = 0; i<pizzas.size(); i++){
+                System.out.println("Pizza: " + pizzas.get(i));
             }
+
+            for(int i = 0; i<drinks.size(); i++){
+                System.out.println("Drinks: " + drinks.get(1));
+            }
+            if(cheeseSticks > 0){
+                System.out.println("Cheese sticks: " + cheeseSticks);
+            }
+
+
+
+
+
 
 
         }

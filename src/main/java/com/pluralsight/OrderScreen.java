@@ -5,9 +5,12 @@ import java.util.Scanner;
 public class OrderScreen {
     Order order = new Order();
     boolean ordering = true;
+    Scanner scanner = new Scanner(System.in);
 
-    public void display () {
+    public static void displayMenu (Scanner scanner) {
         System.out.println("Starting new order");
+        Order order = new Order();
+        boolean ordering = true;
 
         while (ordering) {
             System.out.println("==============================");
@@ -29,18 +32,18 @@ public class OrderScreen {
             System.out.println("0) Cancel Order");
             System.out.println("Enter choice: ");
 
-            Scanner scanner = null;
+
             String choice = scanner.nextLine();
 
             switch (choice) {
                 case "1" :
-                    Pizza p = display(scanner);
-                    order.addPizza(p);
+                    UserInterface.buildPizza(scanner);
+//                    order.addPizza(p);
                     System.out.println("Pizza added!");
                     break;
 
                 case "2":
-                    order.addDrink(scanner,order);
+                    addDrink(scanner, order);
                     break;
 
                 case "3":
@@ -49,7 +52,7 @@ public class OrderScreen {
                     break;
 
                 case "4":
-                    checkout(order);
+                    checkout(scanner, order);
                     ordering = false;
                     break;
 
@@ -68,14 +71,14 @@ public class OrderScreen {
         }
     }
 
-    private void checkout(Scanner scanner,Order order) {
+    private static void checkout(Scanner scanner,Order order) {
         System.out.println("===========================");
         System.out.println("     Order Summary");
         System.out.println("============================");
         System.out.println(order.getReceiptText());
         System.out.println("-----------------------------");
         System.out.println("Saving receipt");
-        
+
         if (order.isEmpty()) {
             System.out.println("Cannot checkout an empty order. ");
             return;
@@ -88,16 +91,16 @@ public class OrderScreen {
         String choice = scanner.nextLine();
 
         if (choice.equals("1")) {
-        try {
-            Receipt.saveReceipt(order);
-            System.out.println("Receipt saved!");
-        }catch (Exception e){
-            System.out.println("Error saving receipt.");
-        }
-        }else{
+            try {
+                Receipt.saveReceipt(order);
+                System.out.println("Receipt saved!");
+            } catch (Exception e) {
+                System.out.println("Error saving receipt.");
+            }
+        } else {
             System.out.println("Order cancelled.");
         }
-
+    }
 
     private static void addDrink(Scanner scanner, Order order){
             System.out.println(" Select drink size:");
@@ -130,6 +133,3 @@ public class OrderScreen {
         }
 
     }
-
-
-}

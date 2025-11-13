@@ -4,8 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Pizza {
-    public Pizza(Size size, Crust crust, boolean b) {
-    }
+//    public Pizza(Size size, Crust crust, boolean b) {
+//    }
 
     public enum Size {Personal, Medium, Large}
     public enum Crust {Thin, Regular, Thick, Cauliflower}
@@ -15,9 +15,9 @@ public class Pizza {
     private boolean stuffedCrust;
     private List<Toppings> toppings = new ArrayList<>();
 
-    public Pizza(boolean stuffedCrust, String crustType, Size size) {
+    public Pizza(boolean stuffedCrust, Crust crustType, Size size) {
         this.stuffedCrust = stuffedCrust;
-        this.crustType = crustType;
+        this.crustType = crustType.name();
         this.size = size;
     }
 
