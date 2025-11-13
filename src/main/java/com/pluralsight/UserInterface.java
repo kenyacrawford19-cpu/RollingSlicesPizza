@@ -67,7 +67,7 @@ public class UserInterface{
                     break;
                 case"3":
                     order.addcheeseSticks();
-                    System.out.println("Cheese sticks added!");
+                    System.out.println("Cheese sticks added! ");
                     break;
                 case"4":
                     checkout(scanner, order);

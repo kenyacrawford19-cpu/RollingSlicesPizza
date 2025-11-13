@@ -58,7 +58,7 @@ public class Order {
             }
 
             for(int i = 0; i<drinks.size(); i++){
-                System.out.println("Drinks: " + drinks.get(1));
+                System.out.println("Drinks: " + drinks.get(i));
             }
             if(cheeseSticks > 0){
                 System.out.println("Cheese sticks: " + cheeseSticks);

@@ -21,9 +21,6 @@ public class Drinks {
 
     @Override
     public String toString() {
-        return "Drinks{" +
-                "size=" + size +
-                ", flavor='" + flavor + '\'' +
-                '}';
+        return size + " " + flavor;
     }
 }

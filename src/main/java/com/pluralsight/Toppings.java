@@ -13,9 +13,6 @@ public class Toppings {
 
     @Override
     public String toString() {
-        return "Toppings{" +
-                "name='" + name + '\'' +
-                ", premium=" + premium +
-                '}';
+        return name;
     }
 }

@@ -73,7 +73,7 @@ public class Pizza {
 
     @Override
     public String toString() {
-        return size + "pizza, " + crustType + "crust" +
+        return size + "pizza, " + crustType + "crust " +
                 (stuffedCrust ? "(stuffed crust)" : "") +
                 ", Toppings: " + toppings;
     }

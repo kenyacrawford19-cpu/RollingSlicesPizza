@@ -39,7 +39,7 @@ public class OrderScreen {
                 case "1" :
                     UserInterface.buildPizza(scanner);
 //                    order.addPizza(p);
-                    System.out.println("Pizza added!");
+                    System.out.println("Pizza added! ");
                     break;
 
                 case "2":
@@ -48,7 +48,7 @@ public class OrderScreen {
 
                 case "3":
                     order.addcheeseSticks();
-                    System.out.println("Cheese sticks added");
+                    System.out.println("Cheese sticks added ");
                     break;
 
                 case "4":
@@ -57,12 +57,12 @@ public class OrderScreen {
                     break;
 
                 case "0":
-                    System.out.println("Order successfully cancelled. Returning to Home.");
+                    System.out.println("Order successfully cancelled. Returning to Home. ");
                     ordering = false;
                     break;
 
                 default:
-                    System.out.println("Invalid selection. Try again.");
+                    System.out.println("Invalid selection. Try again. ");
 
             }
 
@@ -116,17 +116,17 @@ public class OrderScreen {
             };
 
             System.out.println("Select Drink Flavor: ");
-            System.out.println("1) Lemonade");
-            System.out.println("2) Cheerwine");
-            System.out.println("3) Cola");
-            System.out.println("4) Sprite");
+            System.out.println("1) Lemonade ");
+            System.out.println("2) Cheerwine ");
+            System.out.println("3) Cola ");
+            System.out.println("4) Sprite ");
             System.out.println("Choice: ");
             String flavor = switch (scanner.nextLine()){
-                case "1" -> "Lemonade";
-                case "2" -> "Cheerwine";
-                case "3" -> "Cola";
-                case "4" -> "Sprite";
-                default -> "Lemonade";
+                case "1" -> "Lemonade ";
+                case "2" -> "Cheerwine ";
+                case "3" -> "Cola ";
+                case "4" -> "Sprite ";
+                default -> "Lemonade ";
             };
             order.addDrink(new Drinks(size, flavor));
             System.out.println("Drink added!");
