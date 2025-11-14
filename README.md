@@ -29,7 +29,7 @@ The user can build their order interactively:
 - **Sizes:** Small, Medium, Large
 - **Flavors:** Lemonade, Cheerwine, Cola, Sprite
 
-### 🧄 Garlic Knots
+### CHEESE STICKS
 - Adds a side of cheese stickes (+$5 each)
 
 ### 💾 Receipts
