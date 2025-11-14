@@ -1,0 +1,3 @@
+Your Order:
+Drinks{size=Medium, flavor='Lemonade'}
+Total: $2.00

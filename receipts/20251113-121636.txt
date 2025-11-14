@@ -1,0 +1,4 @@
+Your Order:
+Drinks{size=Large, flavor='Cheerwine'}
+Cheese sticks: 1
+Total: $7.50

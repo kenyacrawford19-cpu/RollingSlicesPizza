@@ -1,0 +1,4 @@
+Your Order:
+Mediumpizza, Thincrust, Toppings: [Toppings{name='Ham', premium=true}, Toppings{name='Cheddar', premium=true}, Toppings{name='Pineapples', premium=false}, Toppings{name='Pesto Sauce', premium=false}]
+Cheese sticks: 1
+Total: $23.00

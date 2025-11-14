@@ -1,0 +1,3 @@
+Your Order:
+Personalpizza, Thincrust, Toppings: [Toppings{name='Sausage', premium=true}, Toppings{name='Cheddar', premium=true}, Toppings{name='Green Pepper', premium=false}, Toppings{name='Garlic Alfredo', premium=false}]
+Total: $14.00

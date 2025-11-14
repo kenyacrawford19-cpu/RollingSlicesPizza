@@ -1,0 +1,3 @@
+Your Order:
+Mediumpizza, Regularcrust(stuffed crust), Toppings: [Sausage, Mozzarella, Mushrooms, Pesto Sauce]
+Total: $21.00

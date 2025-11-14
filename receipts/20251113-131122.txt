@@ -1,0 +1,3 @@
+Your Order:
+Large pizza, Thick crust (stuffed crust), Toppings: [Ham , Parmesan , Pineapples , Tomato Sauce ]
+Total: $25.00

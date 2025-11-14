@@ -1,0 +1,3 @@
+Your Order:
+Personalpizza, Thincrust(stuffed crust), Toppings: [Toppings{name='Sausage', premium=true}, Toppings{name='Sausage', premium=true}, Toppings{name='Sausage', premium=true}, Toppings{name='Parmesan', premium=true}, Toppings{name='Mushrooms', premium=false}, Toppings{name='Garlic Alfredo', premium=false}]
+Total: $21.00
